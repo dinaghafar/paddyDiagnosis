@@ -45,8 +45,13 @@ SYMPTOMS = [
 
 # --- 3. ROUTES (Connecting to the Web) ---
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
+@app.route('/')
+def homepage():
+    return render_template('home.html')
+
+
+@app.route('/diagnose', methods=['GET', 'POST'])
+def diagnose():
     diagnosis = None
     selected_symptoms = []
 
