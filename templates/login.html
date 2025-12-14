@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Paddy Doctor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+
+    <div class="container" style="max-width: 400px; text-align: center;">
+        <h2>🔐 Admin Login</h2>
+
+        <!-- Flash Messages (Errors) -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-msg" style="background: #fee2e2; color: #b91c1c; border-color: #fecaca;">
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+
+            <!-- Username -->
+            <input type="text" name="username" placeholder="Username" class="input-field" required autofocus>
+            <br>
+
+            <!-- Password With Show/Hide Button -->
+            <div style="position: relative; width: 100%; display: inline-block;">
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Password" 
+                    class="input-field" 
+                    id="passwordField"
+                    required
+                    style="padding-right: 40px;"
+                >
+
+                <!-- Toggle Button -->
+                <span 
+                    id="togglePassword"
+                    style="
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                        font-size: 14px;
+                        color: #555;
+                    "
+                >
+                    👁️
+                </span>
+            </div>
+
+            <br><br>
+
+            <button type="submit" class="btn-analyze">Login</button>
+        </form>
+
+        <br>
+        <a href="/">← Back to Home</a>
+    </div>
+
+    <!-- Show/Hide Password Script -->
+    <script>
+        const password = document.getElementById("passwordField");
+        const toggle = document.getElementById("togglePassword");
+
+        toggle.addEventListener("click", () => {
+            if (password.type === "password") {
+                password.type = "text";
+                toggle.textContent = "🙈"; // Change icon when visible
+            } else {
+                password.type = "password";
+                toggle.textContent = "👁️"; // Change icon back
+            }
+        });
+    </script>
+
+</body>
+</html>

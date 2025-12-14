@@ -1,0 +1,86 @@
+{
+  "symptoms": [
+    {"id": "leaf_diamond_lesions", "label": "Diamond/Eye-shaped lesions"},
+    {"id": "leaf_gray_center", "label": "Gray/White centers in spots"},
+    {"id": "leaf_brown_border", "label": "Lesions with brown borders"},
+    {"id": "panicle_neck_rot", "label": "Rot at base of panicle"},
+    {"id": "plant_burnt_appearance", "label": "Burnt appearance of field"},
+    {"id": "leaf_water_soaked_streaks", "label": "Water-soaked streaks"},
+    {"id": "leaf_yellow_margins", "label": "Yellow wavy margins"},
+    {"id": "leaf_ooze", "label": "Milky ooze droplets"},
+    {"id": "leaf_drying_wilt", "label": "Leaves rolling/wilting"},
+    {"id": "leaf_general_yellowing", "label": "General yellowing (Chlorosis)"},
+    {"id": "plant_stunted_growth", "label": "Stunted growth"},
+    {"id": "leaf_small_erect", "label": "Leaves small and erect"},
+    {"id": "stem_dead_heart", "label": "Dead Heart (central shoot dies)"},
+    {"id": "stem_holes_frass", "label": "Holes in stem / Frass"},
+    {"id": "panicle_white_head", "label": "White Head (empty grains)"},
+    {"id": "plant_circular_drying", "label": "Circular drying patches (Hopper burn)"},
+    {"id": "stem_visible_insects", "label": "Insects visible at plant base"},
+    {"id": "plant_sooty_mold", "label": "Sooty mold at base"},
+    {"id": "stem_snake_skin_lesions", "label": "Snake-skin pattern on sheath"},
+    {"id": "stem_irregular_spots", "label": "Irregular gray/green spots"},
+    {"id": "leaf_banding_pattern", "label": "Horizontal banding pattern"},
+    {"id": "leaf_yellow_orange_discoloration", "label": "Yellow/Orange discoloration"},
+    {"id": "leaf_twisted_tips", "label": "Twisted leaf tips"},
+    {"id": "plant_reduced_tillering", "label": "Reduced tillering"}
+  ],
+  "diseases": [
+    {
+      "id": "rice_blast",
+      "name": "Rice Blast",
+      "type": "Fungal Disease",
+      "severity": "High",
+      "symptoms": ["leaf_diamond_lesions", "leaf_gray_center", "leaf_brown_border", "panicle_neck_rot", "plant_burnt_appearance"],
+      "management": "Use Tricyclazole. Maintain water level (flood field)."
+    },
+    {
+      "id": "bacterial_leaf_blight",
+      "name": "Bacterial Leaf Blight",
+      "type": "Bacterial Disease",
+      "severity": "High",
+      "symptoms": ["leaf_water_soaked_streaks", "leaf_yellow_margins", "leaf_ooze", "leaf_drying_wilt"],
+      "management": "Drain field. Avoid Nitrogen. Use Copper fungicides."
+    },
+    {
+      "id": "stem_borer",
+      "name": "Stem Borer",
+      "type": "Pest Infestation",
+      "severity": "Medium",
+      "symptoms": ["stem_dead_heart", "panicle_white_head", "stem_holes_frass"],
+      "management": "Clip seedling tips. Install pheromone traps. Apply Cartap Hydrochloride."
+    },
+    {
+      "id": "brown_planthopper",
+      "name": "Brown Planthopper",
+      "type": "Pest Infestation",
+      "severity": "Critical",
+      "symptoms": ["plant_circular_drying", "stem_visible_insects", "plant_sooty_mold"],
+      "management": "Drain water for 3-4 days. Use light traps. Apply Buprofezin."
+    },
+    {
+      "id": "sheath_blight",
+      "name": "Sheath Blight",
+      "type": "Fungal Disease",
+      "severity": "Medium",
+      "symptoms": ["stem_snake_skin_lesions", "stem_irregular_spots", "leaf_banding_pattern"],
+      "management": "Reduce planting density. Drain field. Apply Azoxystrobin."
+    },
+    {
+      "id": "nitrogen_deficiency",
+      "name": "Nitrogen Deficiency",
+      "type": "Nutrient Deficiency",
+      "severity": "Low",
+      "symptoms": ["leaf_general_yellowing", "plant_stunted_growth", "leaf_small_erect"],
+      "management": "Apply Urea or Ammonium Sulfate. Use Leaf Color Chart."
+    },
+    {
+      "id": "tungro_virus",
+      "name": "Rice Tungro Virus",
+      "type": "Viral Disease",
+      "severity": "High",
+      "symptoms": ["plant_stunted_growth", "leaf_yellow_orange_discoloration", "leaf_twisted_tips", "plant_reduced_tillering"],
+      "management": "Control Green Leafhopper vector. Remove infected plants. Synchronize planting."
+    }
+  ]
+}
