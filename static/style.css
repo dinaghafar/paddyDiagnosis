@@ -89,9 +89,6 @@ input[type="checkbox"] {
     border-radius: 4px;
 }
 
-.confidence-high { color: #166534; font-weight: bold; }
-.confidence-low { color: #ea580c; font-weight: bold; }
-
 .badge {
     background: #166534;
     color: white;
@@ -355,23 +352,6 @@ a:hover {
 .badge-high { background-color: var(--red-100); color: var(--red-700); }
 .badge-low { background-color: var(--blue-100); color: var(--blue-700); }
 
-/* Confidence Score */
-.confidence-box {
-  text-align: center;
-}
-
-.confidence-val {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.confidence-val.high { color: var(--green-600); }
-.confidence-val.med { color: var(--amber-500); }
-
-.confidence-label {
-  font-size: 0.75rem;
-  color: var(--slate-400);
-}
 
 /* --- Card Body --- */
 .card-body {
