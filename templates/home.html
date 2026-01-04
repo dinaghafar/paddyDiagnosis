@@ -2,30 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paddy Doctor | Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<div class="container">
-    <h1>🌾 Paddy Doctor</h1>
-
-    <p style="font-size: 18px; text-align: center;">
-        An <strong>Expert System</strong> to help diagnose common paddy diseases and nutrient
         deficiencies based on observed field symptoms.
-    </p>
+<div class="home-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+</div>
 
-    <div style="margin-top: 30px;">
-        <h3>What this system can do:</h3>
-        <ul>
-            <li>Identify major paddy diseases</li>
-            <li>Suggest management practices</li>
-        </ul>
-    </div>
+<div class=" home-container">
 
-    <a href="/leaf">
-        <button class="btn-analyze">Start Diagnosis</button>
-    </a>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-badge">Expert System • Paddy Health</div>
+        <h1 class="hero-title">🌾 Paddy Doctor</h1>
+        <p class="hero-subtitle">
+            Diagnose common paddy diseases and nutrient deficiencies based on observed field symptoms —
+            with clear management suggestions.
+        </p>
+
+        <div class="hero-actions">
+            <a href="/leaf" class="btn-primary">
+                <span class="btn-icon">🩺</span>
+                Start Diagnosis
+            </a>
+
+            <a href="#how" class="btn-secondary">
+                <span class="btn-icon">📌</span>
+                How it works
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-num">Fast</div>
+                <div class="stat-label">Diagnosis Flow</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">Smart</div>
+                <div class="stat-label">Rule-Based Reasoning</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">Clear</div>
+                <div class="stat-label">Management Tips</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURES -->
+    <section class="features" id="how">
+        <h2 class="section-title">What this system can do</h2>
+        <p class="section-desc">
+            Select the symptoms you observe in the field, then the system matches them to the most likely issue.
+        </p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🦠</div>
+                <h3>Identify common diseases</h3>
+                <p>Matches leaf/field symptoms to known paddy disease patterns.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🧪</div>
+                <h3>Detect nutrient deficiencies</h3>
+                <p>Helps indicate possible nutrient-related problems by symptom signs.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Suggest management actions</h3>
+                <p>Provides recommended steps to reduce impact and improve recovery.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Explain your result</h3>
+                <p>Shows the matched symptoms so users understand why it recommends that diagnosis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALLOUT -->
+    <section class="callout">
+        <div class="callout-text">
+            <h3>Ready to check your paddy condition?</h3>
+            <p>Click below to start selecting symptoms and get a diagnosis suggestion.</p>
+        </div>
+        <a href="/leaf" class="btn-primary btn-wide">
+            <span class="btn-icon">🌱</span>
+            Start Diagnosis Now
+        </a>
+    </section>
+
+    <footer class="home-footer">
+        <p>© Paddy Doctor • Expert System for Paddy Diagnosis</p>
+    </footer>
+
 </div>
 
 </body>
