@@ -19,7 +19,7 @@
 
     <!-- Right: Admin Login -->
     <a href="/login" class="nav-login-btn">
-      🔐 Admin Login
+      Admin Login
     </a>
 
   </div>
@@ -38,7 +38,7 @@
   <div class="hero-left">
     <div class="hero-badge">Expert System • Paddy Health</div>
 
-    <h1 class="hero-title">🌾 Paddy Doctor</h1>
+    <h1 class="hero-title">Paddy Doctor</h1>
 
     <p class="hero-subtitle">
       Diagnose common paddy diseases and nutrient deficiencies based on observed field symptoms —
@@ -46,13 +46,11 @@
     </p>
 
     <div class="hero-actions">
-      <a href="/leaf" class="btn-primary">
-        <span class="btn-icon">🩺</span>
+      <a href="/whole" class="btn-primary">
         Start Diagnosis
       </a>
 
       <a href="#how" class="btn-secondary">
-        <span class="btn-icon">📌</span>
         How it works
       </a>
     </div>
@@ -76,7 +74,6 @@
   <!-- RIGHT: Image -->
   <div class="hero-right">
     <div class="hero-image-card">
-      <!-- Put your image in: static/images/home-hero.png -->
       <img
         src="{{ url_for('static', filename='images/home-hero.avif') }}"
         alt="Paddy field illustration"
@@ -87,9 +84,9 @@
 
     <!-- Optional small badges on image -->
     <div class="hero-mini-badges">
-      <div class="mini-badge">🌱 Field Symptoms</div>
-      <div class="mini-badge">🧠 Rule Matching</div>
-      <div class="mini-badge">✅ Management Steps</div>
+      <div class="mini-badge"> Field Symptoms</div>
+      <div class="mini-badge">Rule Matching</div>
+      <div class="mini-badge">Management Steps</div>
     </div>
   </div>
 </header>
@@ -104,25 +101,21 @@
 
         <div class="feature-grid">
             <div class="feature-card">
-                <div class="feature-icon">🦠</div>
                 <h3>Identify common diseases</h3>
                 <p>Matches leaf/field symptoms to known paddy disease patterns.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🧪</div>
                 <h3>Detect nutrient deficiencies</h3>
                 <p>Helps indicate possible nutrient-related problems by symptom signs.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">✅</div>
                 <h3>Suggest management actions</h3>
                 <p>Provides recommended steps to reduce impact and improve recovery.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">📋</div>
                 <h3>Explain your result</h3>
                 <p>Shows the matched symptoms so users understand why it recommends that diagnosis.</p>
             </div>
@@ -135,8 +128,7 @@
             <h3>Ready to check your paddy condition?</h3>
             <p>Click below to start selecting symptoms and get a diagnosis suggestion.</p>
         </div>
-       <a href="/leaf" class="btn-primary">
-            <span class="btn-icon">🌱</span>
+       <a href="/whole" class="btn-primary">
             Start Diagnosis Now
         </a>
     </section>

@@ -42,30 +42,30 @@ def save_uploaded_symptom_image(file_storage, category_slug, sym_id):
 
 
 CATEGORY_KEYS = {
+    "whole": "Whole Plant / General",
     "leaf": "leaf",
     "stem": "stem",
     "panicle": "panicle",
-    "whole": "Whole Plant / General"
 }
 
 TEMPLATE_MAP = {
+    "whole": "whole.html",
     "leaf": "leaf.html",
     "stem": "stem.html",
     "panicle": "panicle.html",
-    "whole": "whole.html"
 }
 
-NEXT_STEP = {"leaf": "stem", "stem": "panicle", "panicle": "whole", "whole": "diagnose"}
-PREV_STEP = {"leaf": None, "stem": "leaf", "panicle": "stem", "whole": "panicle"}
+NEXT_STEP = {"whole": "leaf", "leaf": "stem", "stem": "panicle", "panicle": "diagnose"}
+PREV_STEP = {"whole": None, "leaf": "whole", "stem": "leaf", "panicle": "stem"}
 
 
 def load_data():
     if not os.path.exists(DATA_FILE):
         return {
+            "Whole Plant / General": [],
             "leaf": [],
             "stem": [],
             "panicle": [],
-            "Whole Plant / General": [],
             "disease": []
         }
     with open(DATA_FILE, "r", encoding="utf-8") as f:

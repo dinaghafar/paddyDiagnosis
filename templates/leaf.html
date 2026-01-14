@@ -8,39 +8,37 @@
 <body>
 
 <div class="container">
-    <h1>Leaf Symptom</h1>
+  <h1>Leaf Symptom</h1>
 
-   <form method="POST" action="{{ url_for('update_selection', category_slug='leaf') }}">
+  <form method="POST" action="{{ url_for('update_selection', category_slug='leaf') }}">
         
-        <!-- Leaf Color -->
-        <div class="symptom-grid">
-             {% for s in symptoms_list %}
-            <label class="symptom-item symptom-card">
-  <input type="checkbox" name="symptoms" value="{{ s.id }}"
-         {% if s.id in selected_symptoms %}checked{% endif %}>
+    <!-- Leaf Color -->
+    <div class="symptom-grid">
+      {% for s in symptoms_list %}
+      <label class="symptom-item symptom-card">
+      <input type="checkbox" name="symptoms" value="{{ s.id }}"
+      {% if s.id in selected_symptoms %}checked{% endif %}>
 
-  <div class="symptom-content">
-    <div class="symptom-label">{{ s.label }}</div>
-    <div class="symptom-sub">Tap to select</div>
-  </div>
+      <div class="symptom-content">
+      <div class="symptom-label">{{ s.label }}</div>
+      <div class="symptom-sub">Tap to select</div>
+    </div>
 
-  <div class="symptom-media">
-    <img src="{{ url_for('static', filename=s.img) }}"
-     alt="{{ s.label }}"
-     onerror="this.style.display='none'">
-
-  </div>
+    <div class="symptom-media">
+      <img src="{{ url_for('static', filename=s.img) }}"
+      alt="{{ s.label }}"
+      onerror="this.style.display='none'">
+    </div>
 </label>
 
-            {% endfor %}
-        </div>
-        <div class="nav-buttons">
-  <a class="btn-back" href="{{ url_for('homepage') }}">Back</a>
-  <button type="submit" class="btn-analyze">Next</button>
-</div>
-        
+  {% endfor %}
+  </div>
+  <div class="nav-buttons">
+    <a class="btn-back" href="{{ url_for('whole') }}">Back</a>
+    <button type="submit" class="btn-analyze">Next</button>
+  </div>
 
-    </form>
+  </form>
 </div>
 
 </body>

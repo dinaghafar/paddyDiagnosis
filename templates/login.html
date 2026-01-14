@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - Paddy Doctor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body style="height: 100vh; display: flex; align-items: center; justify-content: center;">
 
     <div class="container" style="max-width: 400px; text-align: center;">
-        <h2>🔐 Admin Login</h2>
+        <h2>Admin Login</h2>
 
         <!-- Flash Messages (Errors) -->
         {% with messages = get_flashed_messages() %}
@@ -51,7 +52,7 @@
                         color: #555;
                     "
                 >
-                    👁️
+                <i class="fa fa-eye"></i>
                 </span>
             </div>
 
@@ -72,10 +73,10 @@
         toggle.addEventListener("click", () => {
             if (password.type === "password") {
                 password.type = "text";
-                toggle.textContent = "🙈"; // Change icon when visible
+                toggle.innerHTML = '<i class="fa fa-eye-slash"></i>';
             } else {
                 password.type = "password";
-                toggle.textContent = "👁️"; // Change icon back
+                toggle.innerHTML = '<i class="fa fa-eye"></i>'; 
             }
         });
     </script>
